@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color and Border</title>
+	<style>
+		#my-paragraph {
+			background-color: white;
+			color: black;
+			border: 1px solid black;
+			width: 50%;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<label for="color">Background Color:</label>
+	<input type="text" id="color" name="color" placeholder="Enter color value (e.g. red, green, blue)">
+	
+	<label for="border-color">Border Color:</label>
+	<input type="text" id="border-color" name="border-color" placeholder="Enter color value (e.g. red, green, blue)">
+
+	<label for="border-width">Border Width:</label>
+	<input type="range" id="border-width" name="border-width" min="0" max="20" value="1">
+
+	<p id="my-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id odio enim. Sed venenatis, nunc ut consequat lobortis, nisi felis bibendum eros, in tempor est mi in velit. Donec interdum leo et dui tincidunt laoreet. Etiam lobortis dui quis magna sagittis, eget blandit felis facilisis. Nullam mattis, sapien eu volutpat posuere, nibh nibh dictum sapien, quis eleifend risus magna id leo. Nunc fermentum purus vel eros fringilla, non ultricies eros lacinia.</p>
+
+	<script>
+		const colorField = document.getElementById("color");
+		const borderColorField = document.getElementById("border-color");
+		const borderWidthField = document.getElementById("border-width");
+		const myParagraph = document.getElementById("my-paragraph");
+		
+		colorField.addEventListener("input", function() {
+			myParagraph.style.backgroundColor = colorField.value;
+		});
+		
+		borderColorField.addEventListener("input", function() {
+			myParagraph.style.borderColor = borderColorField.value;
+		});
+		
+		borderWidthField.addEventListener("input", function() {
+			myParagraph.style.borderWidth = borderWidthField.value + "px";
+		});
+	</script>
+</body>
+</html>
