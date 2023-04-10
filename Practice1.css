@@ -1,0 +1,51 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    }
+    
+    .profile {
+    display: flex;
+    margin-bottom: 50px;
+    }
+    
+    .profile-img {
+    flex: 1;
+    margin-right: 30px;
+    }
+    
+    .profile-img img {
+    width: 200%;
+    border-radius: 200%;
+    }
+    
+    .profile-info {
+    flex: 2;
+    }
+    
+    .profile-info h1 {
+    font-size: 50px;
+    margin-top: 0;
+    }
+    
+    .profile-info p {
+    font-size: 22px;
+    margin-bottom: 10px;
+    }
+    
+    .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    }
+    
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
